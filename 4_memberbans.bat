@@ -23,29 +23,4 @@ echo             ┻━━━━━━━━━━━━━━━━━━━━
 set input=
 set /p input= input:
 if %input%==1 goto A if not goto Y
-if %input%==2 goto B if not goto Y
-if %input%==3 goto C if not goto Y
-if %input%==4 goto D if not goto Y
-if %input%==5 goto E if not goto Y
-if %input%==6 goto F if not goto Y
-exit
-
-:A
-exit
-
-:B
-exit
-
-:C
-exit
-
-:D
-exit
-
-:E
-start 5_logs.bat
-exit
-
-:F
-start 6_exit.bat
 exit
