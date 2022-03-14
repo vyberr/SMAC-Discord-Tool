@@ -1,67 +1,49 @@
 chcp 65001
-mode 90,30
+mode 70,17
 color 4
 @echo off
 :Start
 cls
 goto Start
 :Start
-title WiFi Debugger
-echo ╚╗  ╔╝╚╗  ╔╝
-echo  ╚╗╔╝  ╚╗╔╝      
-echo  ╔╝╚╗   ║║    
-echo ╔╝  ╚╗ ╔╝╚╗   
+title Signed in As (%COMPUTERNAME%)
+echo.
+echo              █████   ██       ██     ████       ██████
+echo             ██       ████   ████    ██  ██     ███
+echo              ███▄    ██ ██ ██ ██   ████████   ███
+echo                  ██  ██   ██  ██   ██    ██    ███
+echo              █████   ██       ██   ██    ██     █████▄
+echo.
+echo             ┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳      
+echo             ┃ {01} Server Nuker  ┃ {04} Member Bans   ┃ 
+echo             ┃ {02} Account Spam  ┃ {05} Logs          ┃
+echo             ┃ {03} Channel Kill  ┃ {06} Exit Securely ┃
+echo             ┻━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┻
 set input=
 set /p input= input:
 if %input%==1 goto A if not goto Y
 if %input%==2 goto B if not goto Y
-if %input%==3 goto D if not goto Y
-if %input%==4 goto E if not goto Y
-if %input%==5 goto F if not goto Y
-if %input%==7 goto C if not goto Y
-if %input%==6 goto G if not goto Y
-if %input%==0000 goto M if not goto Y
-if %input%==404 goto L if not goto Y
+if %input%==3 goto C if not goto Y
+if %input%==4 goto D if not goto Y
+if %input%==5 goto E if not goto Y
+if %input%==6 goto F if not goto Y
 exit
 
-:A 
-start wifidata.bat
+:A
 exit
 
 :B
-start logs.bat
 exit
 
 :C
-cls
-call greet.vbs
 exit
 
 :D
-start vpn.bat
 exit
 
 :E
+start logs.bat
 exit
 
 :F
-shutdown -i
-exit
-
-:G
-start connected.bat
-exit
-
-
-:M
-"materials"
-start unicodemats.bat
-exit
-
-:L
-call credit.vbs && call transition.vbs
-call mainmenu.bat
-exit
-
-:Y
 exit
